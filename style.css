@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #2b1d0f;
+    color: #fff;
+}
+
+header {
+    background-color: #212121;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 35px;
+}
+
+form input {
+    padding: 7px 10px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 7px 18px;
+    font-size: 17px;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: rgb(234, 55, 23);
+}
+
+#error {
+    text-align: center;
+    margin-top: 25px;
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    form {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    form input {
+        width: 70%;
+        padding: 4px 5px;
+        font-size: 1rem;
+    }
+
+    form button {
+        padding: 4px 5px;
+        font-size: 1rem;
+    }
+}
+
+
+/* card container */
+
+#cardContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 15px;
+}
+
+.card {
+    min-width: 280px;
+    width: 27%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 15px;
+    margin-top: 35px;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    button {
+        background-color: tomato;
+        cursor: pointer;
+        padding: 7px 10px;
+        font-size: 16px;
+        color: white;
+        font-weight: 600;
+        width: 150px;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+
+.popupContainer {
+    background-color: #3f2408;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    width: 550px;
+    height: 400px;
+    overflow: scroll;
+    border-radius: 17px;
+    display: none;
+
+    i {
+        margin-left: 95%;
+        margin-bottom: 10px;
+    }
+}
+
+.popup {
+
+    span {
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 30px;
+        border-bottom: 3px solid white;
+        text-align: center;
+    }
+
+    .instruction {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+
+    .ingredents {
+        margin-top: 25px;
+
+        p {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        ul li {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+#closePopup {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 580px) {
+    .popupContainer {
+        width: 95%;
+        height: 400px;
+    }
+}
